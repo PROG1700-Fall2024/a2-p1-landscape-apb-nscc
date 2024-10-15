@@ -20,6 +20,7 @@ def main():
     propertyDepth = 0
     propertyWidth = 0
     grassType = 0
+    numberOfTrees = 0
 
     charge = 0.0
     totalCharge = 0.0
@@ -32,10 +33,13 @@ def main():
     #Get neccessary values
 
     houseNumber = int(input("Enter House Number: "))
+    print("")
     propertyDepth = int(input("Enter property depth (feet): "))
+    print("")
     propertyWidth = int(input("Enter property width (feet): "))
+    print("")
     grassType = int(input("--Grass Type Selection--\n 1 = Fescue \n 2 = bentgrass \n 3 = campus \n Enter the type of grass: "))
-   
+    print("")
     #Apply base labour charge and Calculate sqr footage
 
     charge = BASE_LABOUR_CHARGE
@@ -48,16 +52,21 @@ def main():
 
     #Determine what to charge based on grass type then apply it
 
-    charge += sqrFootage * grassFee[grassType]
-
-
+    charge += sqrFootage * grassFee[grassType - 1] #This is where the if/elif/else statement would go, I just wanted to use a list because they are cool and I can do it in one line
 
     #Get the number of trees from the user
 
+    numberOfTrees = int(input("Enter the number of trees: "))
+    print("")
+
     #Final Calculations
 
-    #Display cost to the user
+    charge += numberOfTrees * TREE_CHARGE
+    totalCharge = charge #redundant line of code but in there in case I would want to do my calculutions serperately from the total calculation
 
+    #Display cost to the user
+    
+    print(f"Total Cost for house {houseNumber} is: ${totalCharge:.2f}")
 
     # YOUR CODE ENDS HERE
 
