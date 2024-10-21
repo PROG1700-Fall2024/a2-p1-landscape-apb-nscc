@@ -14,7 +14,7 @@ def main():
     OVER_TOP_SQR_FEET_CHARGE = 500
     TREE_CHARGE = 100 #Per tree
 
-    grassFee = [0.05, 0.02, 0.01]
+    grassFee = [0.05, 0.02, 0.01] #Price: [Fescue, Bentgrass, Campus]
     
     houseNumber = 0
     propertyDepth = 0
@@ -69,5 +69,6 @@ def main():
     print(f"Total Cost for house {houseNumber} is: ${totalCharge:.2f}")
 
     # YOUR CODE ENDS HERE
+
 
 main()
