@@ -4,6 +4,11 @@
 #Student #:     W0487099
 #Student Name:  Alex Barr
 
+""" So in this program I wanted to make a statement here that I deviated a bit from what was expected in the program.
+    I only have one "if" statement when I needed it. I completely understand how I could have done this with if/elif/elses
+    but I wanted to challenge myself by seeing if I could accomplish the same thing by using a list instead (which I hadn't
+    done before this in python) and it works perfectly which is really exciting to me.  """
+
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
 
@@ -14,7 +19,11 @@ def main():
     OVER_TOP_SQR_FEET_CHARGE = 500
     TREE_CHARGE = 100 #Per tree
 
-    grassFee = [0.05, 0.02, 0.01] #Price: [Fescue, Bentgrass, Campus]
+    grassFescueFee      = 0.05
+    grassBentgrassFee   = 0.02
+    grassCampusFee      = 0.01
+
+    grassFee = [grassFescueFee, grassBentgrassFee, grassCampusFee] #Price: [Fescue, Bentgrass, Campus]
     
     houseNumber = 0
     propertyDepth = 0
